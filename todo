@@ -1,0 +1,7 @@
+
+* use centrapay techblog as base
+* modify theme, try https://astro.build/themes/details/daisy-blog/
+* setup ghpages, cname
+* setup redirect from ncjones.com to blog.ncjones.com
+* figure out commenting, either https://getreplybox.com/ or just twitter?
+
