@@ -1,7 +1,7 @@
 ---
 const siteInfo = {
-  siteName: 'Daisy Blog',
-  siteDesc: 'This is a simple blog',
+  siteName: 'Nathan on Software',
+  siteDesc: "Nathan's Blog",
 }
 
 let {title} = Astro.props;
@@ -21,14 +21,16 @@ if(!img) {
 ---
 
 <head>
-  
+
 	<!-- essential -->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
-  
+
   <!-- core -->
 	{title && <title>{title}</title>}
+  <!-- hello -->
 	{desc && <meta name="description" content={desc}>}
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 	<!-- twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	{title && <meta name="twitter:title" content={title} />}
