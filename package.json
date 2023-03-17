@@ -1,7 +1,7 @@
 {
-  "name": "daisy-blog",
-  "version": "0.1.0",
-  "private": false,
+  "name": "@ncjones/blog",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
