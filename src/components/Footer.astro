@@ -1,7 +1,20 @@
-<footer class="footer footer-center p-4">
-  <div>
+---
+import TwitterSvg from '@components/svg/Twitter'
+import LinkedinSvg from '@components/svg/Linkedin'
+import GithubSvg from '@components/svg/Github'
+---
+<footer class="footer footer-center p-8">
+  <div class="space-y-2">
     <p class="text-xs text-base-content/70">
-      &copy; {(new Date()).getFullYear()} Nathan Jones
+      Copyright &copy; {(new Date()).getFullYear()} Nathan Jones
     </p>
+
+    <div class="flex justify-center space-x-4">
+      <a href="https://twitter.com/_ncjones"><TwitterSvg /></a>
+      <a href="https://www.linkedin.com/in/nathan-c-jones/"><LinkedinSvg /></a>
+      <a href="https://github.com/ncjones"><GithubSvg /></a>
+
+    </div>
+
   </div>
 </footer>
