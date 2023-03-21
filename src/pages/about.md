@@ -3,6 +3,10 @@ layout: ../components/layouts/page.astro
 title: About Me
 ---
 
+<figure class="flex justify-center">
+  <img src="/img/workstation-with-coffee-cup.jpg" class="rounded bg-base-200" />
+</figure>
+
 # Nathan Jones
 
 ## About Me
