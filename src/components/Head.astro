@@ -15,8 +15,10 @@ if(!title) {
 if(!desc) {
   desc = siteInfo.siteDesc
 }
-if(!img) {
-  img = Astro.site+'card.png'
+if(!(img?.startsWith('http'))) {
+  const imgUrl = new URL(Astro.site);
+  imgUrl.pathname = (img ?? '/img/default.png');
+  img = imgUrl.href;
 }
 ---
 
