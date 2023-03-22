@@ -19,6 +19,6 @@ export default defineConfig(
 				}
 			}]
 		},
-		site: 'http://localhost:3000/',
+		site: 'https://blog.ncjones.com/',
 		integrations: [sitemap()]
 	});
