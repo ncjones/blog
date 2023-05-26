@@ -1,8 +1,6 @@
 ---
-const siteInfo = {
-  siteName: 'Nathan on Software',
-  siteDesc: "Nathan's Blog",
-}
+let siteName = 'Nathan on Software';
+let siteDesc = 'Nathan\'s Blog';
 
 let {title} = Astro.props;
 let {desc} = Astro.props;
@@ -10,10 +8,10 @@ let {img} = Astro.props;
 let {twitterUsername} = Astro.props;
 
 if(!title) {
-  title = siteInfo.siteName
+  title = siteName;
 }
 if(!desc) {
-  desc = siteInfo.siteDesc
+  desc = siteDesc;
 }
 if(!(img?.startsWith('http'))) {
   const imgUrl = new URL(Astro.site);
@@ -22,32 +20,34 @@ if(!(img?.startsWith('http'))) {
 }
 ---
 
+<html>
 <head>
 
-	<!-- essential -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
 
-  <!-- core -->
-	{title && <title>{title}</title>}
-  <!-- hello -->
-	{desc && <meta name="description" content={desc}>}
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-	<!-- twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	{title && <meta name="twitter:title" content={title} />}
-	{desc && <meta name="twitter:description" content={desc} />}
-	<meta name="twitter:image" content={img} />
-	{title && <meta name="twitter:image:alt" content={title} />}
-	{twitterUsername && <meta name="twitter:site" content={twitterUsername}/>}
-	{twitterUsername && <meta name="twitter:creator" content={twitterUsername}/>}
-	<!-- og -->
-	{title && <meta property="og:title" content={title} />}
-	{desc && <meta property="og:description" content={desc} />}
-	<meta property="og:image" content={img} />
-	{title && <meta property="og:image:alt" content={title} />}
-	{title && <meta property="og:site_name" content={title} />}
-	<meta property="og:type" content="object" />
-	<meta property="og:url" content={Astro.site} />
-	<slot/>
+  {title && <title>{title}</title>}
+  {desc && <meta name="description" content={desc}>}
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  {title && <meta name="twitter:title" content={title} />}
+  {desc && <meta name="twitter:description" content={desc} />}
+  <meta name="twitter:image" content={img} />
+  {title && <meta name="twitter:image:alt" content={title} />}
+  {twitterUsername && <meta name="twitter:site" content={twitterUsername}/>}
+  {twitterUsername && <meta name="twitter:creator" content={twitterUsername}/>}
+
+  <!-- og -->
+  {title && <meta property="og:title" content={title} />}
+  {desc && <meta property="og:description" content={desc} />}
+  <meta property="og:image" content={img} />
+  {title && <meta property="og:image:alt" content={title} />}
+  {title && <meta property="og:site_name" content={siteName} />}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.canonicalURL} />
+
+  <slot/>
+
 </head>
