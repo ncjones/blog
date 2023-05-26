@@ -21,7 +21,7 @@ export async function getStaticPaths({ rss }) {
 const { post: { Content }, post } = Astro.props;
 ---
 <Blog title={post.title} desc={post.desc} img={post.img ? post.img : null}>
-	<div class="flex justify-center">
+	<div class="justify-center">
 		<div class="py-6 prose lg:prose-lg">
 			{post.img && post.imgWidth && post.imgHeight ?
 				<figure class="flex justify-center">
