@@ -1,5 +1,5 @@
 ---
-title: Node.js Stream Composition
+title: Better Node.js Stream Composition
 date: 2023-05-26
 author: Nathan
 desc: |
@@ -11,10 +11,10 @@ img: /img/coffee-cup-riding-tricycle-with-streamers-on-handle-bars-digital-art.j
 ---
 
 
-Stream processing is useful for keeping memory jsage low when processing large
+Stream processing is useful for keeping memory usage low when processing large
 amounts of data. Node.js excels at stream processing but it can be tricky
 figuring out how to compose streams in Node.js with correct error handling.  By
-using `stream.pipeline()`, error handling for Node.js stream composition is
+using stream.pipeline(), error handling for Node.js stream composition is
 greatly simplified.
 
 
@@ -50,24 +50,24 @@ Many parts of the Node.js standard library implement streams:
 
 ## Node.js Stream Composition Patterns
 
-There are two patterns available for Node.js stream composition: `Readable.pipe()` and `stream.pipeline()`.
+There are two patterns available for Node.js stream composition: Readable.pipe() and stream.pipeline().
 
 The
-[`Readable.pipe()`](https://nodejs.org/docs/latest-v18.x/api/stream.html#readablepipedestination-options)
-method was introduced in Node.js v0.10 (released in 2013). The `.pipe()` method
+[Readable.pipe()](https://nodejs.org/docs/latest-v18.x/api/stream.html#readablepipedestination-options)
+method was introduced in Node.js v0.10 (released in 2013). The .pipe() method
 enabled elegant stream composition but correct error handling was difficult.
 
 The
-[`stream.pipeline()`](https://nodejs.org/docs/latest-v18.x/api/stream.html#streampipelinesource-transforms-destination-options)
+[stream.pipeline()](https://nodejs.org/docs/latest-v18.x/api/stream.html#streampipelinesource-transforms-destination-options)
 function was introduced in Node.js v10 (released in 2018). It addresses the
-drawbacks with `.pipe()`. The "node:stream/promises" package, available since
+drawbacks with .pipe(). The "node:stream/promises" package, available since
 Node.js v15 (released in 2020), simplifies stream error handling further by
-making `.pipeline()` compatible with async/await.
+making .pipeline() compatible with async/await.
 
 
 ## Composing Streams the Old Way with Readable.pipe()
 
-The `.pipe()` function is used to compose a readable stream with other
+The .pipe() function is used to compose a readable stream with other
 writable streams. The following example demonstrates a solution to printing a gzipped
 file to stdout.
 
@@ -82,7 +82,7 @@ This simple example has two problems:
 1. It is missing error handling.
 2. It cannot be awaited.
 
-Adding error handling and promises will result in our `.pipe()` solution looking
+Adding error handling and promises will result in our .pipe() solution looking
 something like the following:
 
 ```javascript
@@ -112,8 +112,8 @@ also need to explicitly close the file to avoid a file descriptor leak.
 
 ## Better Stream Composition with stream.pipeline()
 
-The Node.js core stream module includes the `stream.pipeline()` utility
-function for addressing the above issues with `Readable.pipe()`:
+The Node.js core stream module includes the stream.pipeline() utility
+function for addressing the above issues with Readable.pipe():
 
 1. The pipeline can be awaited without Promise boilerplate.
 2. All pipeline errors can be handled with a single promise rejection.
@@ -125,7 +125,7 @@ We can import the promisified version from "node:stream/promises":
 const { pipeline } = require('node:stream/promises');
 ```
 
-The stream composition is defined with a single call to `pipeline()` which
+The stream composition is defined with a single call to pipeline() which
 takes a Readable source, zero or more Transforms, and a Writable destination:
 
 ```js
@@ -148,5 +148,5 @@ await pipeline(
 };
 ```
 
-The `stream.pipeline()` function encourages us to define the stream composition
+The stream.pipeline() function encourages us to define the stream composition
 in one place and gives us confidence stream errors are handled correctly.
