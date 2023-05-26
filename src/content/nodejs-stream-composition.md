@@ -4,7 +4,7 @@ date: 2023-05-26
 author: Nathan
 desc: |
   Node.js pipeline() utility was added in 2018 as a better alternative to
-  stream.pipe(). It is not widely used but it's a great way to create
+  Readable.pipe(). It is not widely used but it's a great way to create
   streaming data applications on Node.js because of better error handling,
   cleaner syntax and compatibility with async/await.
 img: /img/coffee-cup-riding-tricycle-with-streamers-on-handle-bars-digital-art.jpg
