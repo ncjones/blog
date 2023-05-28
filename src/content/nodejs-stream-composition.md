@@ -1,5 +1,5 @@
 ---
-title: Better Node.js Stream Composition
+title: Node.js Stream Composition
 date: 2023-05-26
 author: Nathan
 desc: |
