@@ -23,10 +23,10 @@ benefits to newcomers: they get productive with code sooner and they get
 exposed to the team's delivery tooling and culture. But maintaining such a
 policy has other ongoing benefits for the whole team.
 
-Delivering any change to production requires executing a sequence of steps. A
-day-one change is like a tracer through those steps. It can highlight
-bottlenecks in the developer onboarding process and the software delivery
-pipeline.
+Delivering any change to production requires executing a reproducible sequence
+of steps. A day-one change is like a tracer through those all of the steps,
+even the ones that are not repeated often. It can highlight bottlenecks in the
+developer onboarding process and the software delivery pipeline.
 
 A smoother local dev setup process helps the team to minimize the occurrence of
 "works on my machine" type of issues and it lowers the bar for contributing to
