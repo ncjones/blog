@@ -24,7 +24,7 @@ to have pet names to make communicating about them easier.
 Naming things is one of the hardest aspects of software design. Well-named
 variables, types, and functions generally will have names that communicate
 their purpose. Intuitively we want to name our applications based on the same
-principles -- descriptively based on their intended function. The problem with
+principles &mdash; descriptively based on their intended function. The problem with
 naming applications descriptively is twofold: firstly, name collisions are
 highly likely; and secondly, a descriptive name can lose its accuracy over
 time.
