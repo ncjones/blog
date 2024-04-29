@@ -17,7 +17,7 @@ identifying that which is named.
 
 Naming things is one of the hardest aspects of software design. Well-named
 variables, types, and functions generally will have names that communicate
-their purpose. Intuitively we want to name our applications based on the same
+their purpose. Intuitively we want to name our applications using the same
 principles — descriptively based on their intended function. The problem with
 naming applications descriptively is twofold: firstly, name collisions are
 highly likely; and secondly, a descriptive name can lose its accuracy over
