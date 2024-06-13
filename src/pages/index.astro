@@ -1,10 +1,10 @@
 ---
-import { published } from "@data/post"
+import { publishedPosts } from "@data/post"
 import Blog from "@layouts/blog";
 import Preview from "@components/blog/preview";
 
 const markdownFiles = await Astro.glob('../content/**/*.md')
-const posts = published( markdownFiles );
+const posts = publishedPosts( markdownFiles );
 ---
 
 <Blog>
