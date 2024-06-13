@@ -24,7 +24,7 @@ img: /img/manuscript-on-wooden-desk.webp
       Part 1: <a href="/posts/nodejs-stream-composition">Node.js Stream Composition</a><br>
       Part 2: <a href="/posts/nodejs-custom-streams">Node.js Custom Streams</a><br>
       Part 3: [[Streaming to AWS S3 with Node.js]] <br>
-      Part 4: [[Streaming JSON Lines with Node.js]] <br>
+      Part 2: <a href="/posts/nodejs-streaming-json-lines">Streaming JSON Lines with Node.js</a><br>
     </div>
   </div>
 </div>
