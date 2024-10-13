@@ -5,7 +5,7 @@ author: Nathan
 desc: |
   Shared logging context radically improves the quality of application logs
   while reducing developer burden. This can be achieved easily in Node.js using
-  AsyncLocalStorage and several lines of code.
+  AsyncLocalStorage.
 img: /img/segmented-layered-glowing-application-log-file.webp
 ---
 
