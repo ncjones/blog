@@ -70,7 +70,7 @@ SDKs for popular APM tools like Newrelic and Sentry also support and encourage t
 
 How to create a shared logging context will vary by runtime environment. [Async Local Storage][async-local-storage] is the key enabler for creating a shared logging context in Node.js. It provides a mechanism for scoping a variable to an async call chain. All async tasks scheduled on the event loop will inherit the Async Local Storage store from their common ancestor task that initialized the store. Async Local Storage has been part of the Node.js standard library since Node.js 16 (released April 2021).
 
-## Shared Log Context: Node.js How To
+## Implementing Shared Log Context With Node.js
 
 The following sections explain how to implement a shared logging context in Node.js. Although the code samples use the [Pino][pino] logging library and the [Hapi][] web application framework, the demonstrated patterns will apply to other logging libraries and application frameworks.
 
@@ -147,4 +147,5 @@ Including dynamic shared context in logs radically improves the usefulness of st
 
 
 [pino]: https://github.com/pinojs
+[hapi]: https://hapi.dev
 [async-local-storage]: https://nodejs.org/docs/latest-v20.x/api/async_context.html#class-asynclocalstorage
