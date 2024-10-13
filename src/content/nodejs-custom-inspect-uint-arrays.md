@@ -3,7 +3,7 @@ title: Custom Inspect for Node.js UInt Arrays
 date: 2024-02-25
 author: Nathan
 desc: |
-  Adding a `[util.inspect.custom]` method to Node.js UInt array types is a
+  Adding a [util.inspect.custom] method to Node.js UInt array types is a
   simple way to improve debugging experience when dealing with binary data. An
   example where this is beneficial is when inspecting Algorand blockchain
   transaction details.
