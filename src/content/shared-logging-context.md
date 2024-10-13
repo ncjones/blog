@@ -28,8 +28,8 @@ There are three aspects to making effective logs. Log analysis becomes much easi
 A typical server log for a web application may contain entries like the following:
 
 ```
-[2024-10-01T10:10:00.013Z] Found 3 active widgets for customer b6c63
-[2024-10-01T10:10:00.000Z] Response GET /customers/b6c63/widgets 200
+[2024-10-01T10:10:00.013Z] Found 3 active widgets for customer ffb35003
+[2024-10-01T10:10:00.000Z] Response GET /api/customers/ffb35003/widgets 200
 ```
 
 There are several issues with the way these two entries appear in the log:
