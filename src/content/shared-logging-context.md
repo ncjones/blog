@@ -59,6 +59,9 @@ The first two points — structured events and static log messages — are intui
 
 A shared logging context enables a different approach to logging. Instead of emitting additional log events every time useful information is encountered, we can choose to simply update the log context. The common logging that occurs after every web request is completed will include the context that was attached while handling the request.
 
+The following screenshot shows an example Newrelic log search based on shared logging context. In this example query we are searching for all log events relating to customer API requests for a specific customer.
+![Example Newrelic log search, filtering by ](/public/img/newrelic-log-search-example.webp)
+
 Decoupling log event emitters from their surrounding context also improves the separation of concerns in our modules. Emitting a contextualized log event no longer requires the caller's context to be explicitly provided.
 
 An alternative to using shared logging context is to rely on a distributed tracing tool like Newrelic to provide log traceability. If a distributed trace ID is included in log events, related logs for a single transaction can be discovered easily. Including the context directly on every log event is a superior option, though, because the information is easier to find, and more powerful logging insights are possible.
