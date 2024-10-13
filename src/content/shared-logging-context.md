@@ -21,7 +21,7 @@ There are three aspects to making effective logs. Log analysis becomes much easi
 
 1. **Structured Logs** — Emitting log events from our application as structured data allows us to query and visualize our logs with logging aggregators like Grafana, Datadog, Newrelic, or Cloudwatch.
 2. **Event Type Discriminators** — Ensuring every logged event has a unique event type discriminator enables greater insights from our logging data. It allows us to treat any log event as a custom application metric.
-3. **Common Log Context** — Log messages include additional structured attributes to provide context for the surrounding transaction execution context.
+3. **Common Log Context** — Log messages include additional structured attributes to provide context for the surrounding transaction execution context. How to achieve this is the main focus of this article.
 
 ### Bad Logging Example
 
