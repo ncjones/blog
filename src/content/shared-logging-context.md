@@ -44,7 +44,7 @@ The following shows the same "Found 3 active widgets" log event from above but
 reworked to address the issues mentioned above.
 
 ```json
-{ timestamp: "2024-10-01T10:10:00.000Z", msg: "Active widgets found", widgetCount: 3, customerId: "b6c63", "method": "GET", "path": "/users/b6c63/widgets" }
+{ "timestamp": "2024-10-01T10:10:00.000Z", "msg": "Active widgets found", "widgetCount": 3, "perms.accountId": "ffb35003", "req.method": "GET", "req.path": "/api/customers/ffb35003/widgets" }
 ```
 
 The issues outlined previously have now been addressed:
