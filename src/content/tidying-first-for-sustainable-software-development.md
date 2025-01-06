@@ -33,9 +33,9 @@ spiraling into a tragic mess.
 ## What is Code Quality?
 
 Unlike other components of software quality, like correctness and
-responsiveness, code quality does not directly impact the user. Instead, it
-only impacts the developer; a developer's job is harder when code quality is
-poor.
+responsiveness, code quality does not directly impact the user. Only the
+developer is directly impacted; a developer's job is harder when code quality
+is poor.
 
 The relationship between code quality and ease of change is so significant that
 "ease of change" is one of the best proxies we have for defining code quality.
