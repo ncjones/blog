@@ -35,8 +35,9 @@ Surprisingly, it doesn't provide object-oriented solutions for interfacing with
 data structures like JavaScript, Ruby or Kotlin do. Instead of chaining
 collection methods like map, filter, find, and reduce, Lua devs need to nest
 calls to static utility functions. This results in a clunkier developer
-experience and code that's harder to read. In my plugin I created a sorted set
-data structure.
+experience and code that's harder to read. An example from my Ag plugin is the
+custom sorted set data structure abstraction. It needs to be converted back to
+a Lua table in order to use collection filtering.
 
 The Neovim standard library also surprisingly lacks higher-level abstractions
 for dealing with files and buffers. I found that only low-level access was
