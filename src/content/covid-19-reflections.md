@@ -14,9 +14,11 @@ During the COVID-19 pandemic, I, like many New Zealanders, tried to make the
 best decisions I could for my family based on the information available at the
 time. Since then, I have reflected on my experiences — both positive and
 negative — and how the public health response affected my trust in
-institutions. I originally submitted the following account to the Royal
-Commission on COVID-19 Lessons Learned. I am sharing it here to contribute to
-open discussion about how we can respond better in the future.
+institutions. I originally submitted the following account to the
+[Royal Commission on COVID-19 Lessons
+Learned](https://haveyoursay.covid19lessons.royalcommission.nz/). I am sharing
+it here to contribute to open discussion about how we can respond better in the
+future.
 
 ## About Me
 
