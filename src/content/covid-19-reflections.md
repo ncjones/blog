@@ -6,6 +6,8 @@ desc: |
   My submission to the New Zealand Royal Commission on COVID-19 Lessons
   Learned.
 img: /img/tongariro-into-the-mist.webp
+# credit: Hannah Wright
+# https://unsplash.com/photos/pathway-on-hill-Kxsar9yzda4
 ---
 
 During the COVID-19 pandemic, I, like many New Zealanders, tried to make the
