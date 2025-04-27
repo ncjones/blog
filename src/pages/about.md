@@ -52,8 +52,5 @@ building, running and maintaining enterprise software with a focus on the
 
 ## Contact Me
 
-You can reach me on [LinkedIn][] or via @_ncjones on [Twitter][].
-
-
-[LinkedIn]: https://www.linkedin.com/in/nathan-c-jones/
-[Twitter]: https://twitter.com/_ncjones
+x.com : [@_ncjones](https://x.com/_ncjones)<br>
+linkedin : [nathan-c-jones](https://www.linkedin.com/in/nathan-c-jones/)
