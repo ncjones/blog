@@ -3,16 +3,13 @@ let siteName = 'Nathan on Software';
 let siteDesc = 'Nathan\'s Blog';
 
 let {title} = Astro.props;
-let {desc} = Astro.props;
 let {img} = Astro.props;
 let {twitterUsername} = Astro.props;
 
 if(!title) {
   title = siteName;
 }
-if(!desc) {
-  desc = siteDesc;
-}
+const desc = (Astro.props.desc ?? siteDesc).replace(/\s+/g, ' ').trim();
 if(!(img?.startsWith('http'))) {
   const imgUrl = new URL(Astro.site);
   imgUrl.pathname = (img ?? '/img/default.png');
