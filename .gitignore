@@ -1,3 +1,9 @@
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/patches
+.pnp.*
+
 # build output
 dist
 
