@@ -10,7 +10,7 @@ export async function GET(context) {
     items: posts.map((post) => ({
       title: post.title,
       pubDate: post.date,
-      description: post.desc,
+      description: post.description,
       link: post.fullPath,
     })),
   });

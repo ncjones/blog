@@ -1,0 +1,77 @@
+---
+import Container from '../components/spotlight/Container.astro';
+import BaseLayout from '../components/spotlight/BaseLayout.astro';
+import SocialLink from '../components/spotlight/SocialLink.astro';
+import XLogo from '../components/svg/X.astro'
+import GithubLogo from '../components/svg/Github.astro'
+import LinkedInLogo from '../components/svg/Linkedin.astro'
+const description = 'It\'s me, Nathan Jones. I am sharing my learnings on software engineering.';
+---
+<BaseLayout title="About" desc={description}>
+  <Container class="mt-16 sm:mt-32">
+    <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+
+      <div class="lg:pl-20">
+        <div class="max-w-xs px-2.5 lg:max-w-none">
+          <img alt="" loading="lazy" width="800" height="800"
+            decoding="async" data-nimg="1" class="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800" style="color:transparent"
+            src="/img/workstation-with-coffee-cup.jpg" />
+        </div>
+      </div>
+
+      <div class="lg:order-first lg:row-span-2">
+        <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">About Me</h1>
+        <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+
+          <p>I am a full stack developer, a software architect, and a leader of software
+          engineers. I love designing and building software systems and I'm passionate
+          about nurturing teams, processes and culture to do the same.</p>
+
+          <p>Since 2006 I have held professional roles where I was responsible for
+          delivering enterprise software across many industries including healthcare,
+          dairy, tourism, advertising, recruitment, insurance, logistics, and payments.</p>
+
+          <p>I have worked with a wide variety of technologies in my professional capacity
+          including: back-end systems with JVM, Python and node.js; relational and Nosql
+          DBs (including a stint as a a Mongo DBA); infrastructure across multiple cloud
+          providers; used a wide variety of browser-based JavaScript and CSS frameworks;
+          and worked with a varienty of CI/CD and test automation tools.</p>
+
+          <p>In 1996, as a 12 year old, I discovered the thrill of creating something from
+          nothing using GOTO statements with MS Basic on my dad's Pentium 100. I'm
+          grateful that decades later I'm able to continue to experience this joy and
+          share it with others.</p>
+
+        <h1 class="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">About This Blog</h1>
+
+        <p>Most of the work building an enterprise software product is within the realm of
+        either back-end APIs or front-end user interfaces and collectively this is
+        often referred to as "full stack". To me "full stack" is more than this; it
+        indicates the ability to deliver a working product as the sole member of a
+        technology team.</p>
+
+        <p>Besides merely back-end and front-end application development, "full stack"
+        also requires some technical ability relating to other dimensions such as
+        infrastructure, databases, networking, and deployment tooling. These other
+        dimensions, along with the processes we use to manage them, can be collectively
+        described as the "glue".</p>
+
+        <p>In this blog I intend to share my thoughts about effective patterns for
+        building, running and maintaining enterprise software with a focus on the
+        "glue" that makes us more effective "full stack" engineers.</p>
+
+
+        </div>
+      </div>
+
+      <div class="lg:pl-20">
+        <ul role="list">
+          <SocialLink href="https://x.com/_ncjones" icon={XLogo}>Follow on X</SocialLink>
+          <SocialLink href="https://github.com/ncjones" class="mt-4" icon={GithubLogo}>Follow on GitHub</SocialLink>
+          <SocialLink href="https://www.linkedin.com/in/nathan-c-jones/" class="mt-4" icon={LinkedInLogo}>Follow on LinkedIn</SocialLink>
+        </ul>
+      </div>
+
+    </div>
+  </Container>
+</BaseLayout>

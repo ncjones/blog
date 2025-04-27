@@ -1,7 +1,12 @@
 ---
+import '../../style/tailwind.css';
 import Blog from "@layouts/blog";
 import Date from "@components/utilities/Date";
 import Posts from '../../Posts.js'
+import Container from '../../components/spotlight/Container.astro';
+import Header from '../../components/spotlight/Header.astro';
+import Footer from '../../components/spotlight/Footer.astro';
+import BaseLayout from '../../components/spotlight/BaseLayout.astro';
 
 export async function getStaticPaths() {
   return (await Posts.all()).map(post => ({
@@ -13,34 +18,26 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 ---
-<Blog title={post.title} desc={post.desc} img={post.img ? post.img : null}>
-	<div class="justify-center">
-		<div class="py-6 prose lg:prose-lg">
-			{post.img && post.imgWidth && post.imgHeight ?
-				<figure class="flex justify-center">
-					<img src={post.img} alt={post.title} width={post.imgWidth} height={post.imgHeight} class="rounded bg-base-200" />
-				</figure>
-				: post.img &&
-				<figure class="flex justify-center">
-					<img src={post.img} alt={post.title} class="rounded bg-base-200" />
-				</figure>
-			}
-			<h1>{post.title}</h1>
-			<div class="flex gap-3">
-				<span class="badge badge-ghost">
-					<Date date={post.date}/>
-				</span>
-				{post.author &&
-					<span class="text-sm text-base-content/70">By {post.author}</span>
-				}
-			</div>
-			<div>
-				<Content />
-			</div>
+<BaseLayout title={post.title} desc={post.description} img={post.img}>
+  <Container class="mt-16 lg:mt-32">
+    <div class="xl:relative">
+      <div class="mx-auto max-w-2xl">
+        <article>
+          <header class="flex flex-col">
+            <h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">{post.title}</h1>
+            <time dateTime="2022-09-02" class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500">
+              <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500">
+              </span>
+              <span class="ml-3"><Date date={post.date}</span>
+            </time>
+          </header>
+          <div class="mt-8 prose dark:prose-invert" data-mdx-content="true">
 
-            <script defer src="https://cdn.commento.io/js/commento.js"></script>
-            <div id="commento"></div>
+            <Content />
 
-		</div>
-	</div>
-</Blog>
+          </div>
+        </article>
+      </div>
+    </div>
+  </Container>
+</BaseLayout>

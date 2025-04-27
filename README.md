@@ -13,12 +13,10 @@ yarn start
 
 ## Credit
 
-Based on the beautifle and simple [Daisy UI](https://github.com/saadeghi/daisy-blog) template for Astro and Tailwind CSS.
+Based on the Tailwind Spotlight template
+https://tailwindcss.com/plus/templates/spotlight.
 
 
 ## Legal
 
-Blog content is Copyright © 2023 Nathan Jones and licensed CC-BY 2.0.
-
-Templates are Copyright © 2022-2023 Pouya Saadeghi and Nathan Jones and licensed MIT.
-
+Blog content is Copyright © Nathan Jones and licensed CC-BY 2.0.

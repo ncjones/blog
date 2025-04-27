@@ -1,6 +1,8 @@
 import { getCollection, render } from 'astro:content';
 
-class Post {
+const mediumDateFormatter = new Intl.DateTimeFormat('en', {dateStyle: 'medium'});
+
+export class Post {
 
   constructor(content) {
     this._content = content;
@@ -31,6 +33,17 @@ class Post {
     return this._content.data.date;
   }
 
+  get formattedDate() {
+    return mediumDateFormatter.format(this.date);
+  }
+
+  get hyphenatedDate() {
+    const yyyy = this.date.getFullYear();
+    const mm = String(this.date.getMonth() + 1).padStart(2, '0');
+    const dd = String(this.date.getDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+  }
+
   get timestamp() {
     return +this.date;
   }
@@ -39,7 +52,7 @@ class Post {
     return this._content.data.author;
   }
 
-  get desc() {
+  get description() {
     return this._content.data.desc;
   }
 

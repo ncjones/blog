@@ -1,0 +1,48 @@
+---
+import DesktopNavigation from './DesktopNavigation.astro';
+import MobileNavigation from './MobileNavigation.astro';
+const navItems = [
+  { href: '/', label: 'Articles' },
+  { href: '/about/', label: 'About' },
+];
+(navItems.find(i => i.href == Astro.url.pathname) ?? {}).selected = true;
+---
+<header class="pointer-events-none relative z-50 flex flex-none flex-col" style="height:var(--header-height);margin-bottom:var(--header-mb)">
+  <div class="top-0 z-10 h-16 pt-6" style="position:var(--header-position)">
+    <div class="sm:px-8 top-(--header-top,--spacing(6)) w-full" style="position:var(--header-inner-position)">
+      <div class="mx-auto w-full max-w-7xl lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="mx-auto max-w-2xl lg:max-w-5xl">
+            <div class="relative flex gap-4">
+              <div class="flex flex-1">
+                <div class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:ring-white/10">
+                  <a aria-label="Home" class="pointer-events-auto" href="/">
+                    <img
+                      alt=""
+                      fetchPriority="high"
+                      width="512" height="512"
+                      decoding="async"
+                      data-nimg="1"
+                      class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9"
+                      style="color:transparent"
+                      sizes="2.25rem"
+                      src="https://www.gravatar.com/avatar/0e976f88026df14e3caf5982df15e64b?s=200&d=identicon"/>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-1 justify-end md:justify-center">
+                <MobileNavigation items={navItems} class="pointer-events-auto md:hidden"/>
+                <DesktopNavigation items={navItems} class="pointer-events-auto hidden md:block"/>
+              </div>
+              <div class="flex justify-end md:flex-1">
+                <div class="pointer-events-auto">
+                  <!-- Theme select was here. We will just use the OS preference for choosing dark mode. -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
