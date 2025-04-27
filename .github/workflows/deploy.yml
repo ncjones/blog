@@ -1,9 +1,5 @@
-name: Build and Deploy
-
 on:
-  push:
-    branches:
-      - master
+  push: { branches:  [ master ] }
 
 jobs:
 
@@ -12,14 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: npm
-      - run: npm clean-install
-      - run: npm run build
+        with: { node-version: "18", cache: yarn }
+      - run: yarn install
+      - run: yarn build
       - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+        with: { path: dist }
 
   deploy:
     needs: build

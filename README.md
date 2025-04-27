@@ -6,8 +6,8 @@ Source for https://blog.ncjones.com/.
 ## Local Preview
 
 ```
-npm install
-npm run start
+yarn install
+yarn start
 ```
 
 
