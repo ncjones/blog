@@ -14,7 +14,7 @@ export default defineConfig({
     ],
     syntaxHighlight: 'shiki',
     shikiConfig: {
-      theme: 'poimandres',
+      theme: 'rose-pine',
       langs: [],
       wrap: false
     }
