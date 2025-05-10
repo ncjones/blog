@@ -3,7 +3,8 @@ const description = (Astro.props.desc ?? '')
   .replace(/\s+/g, ' ')
   .trim();
 
-const title = [
+const title = Astro.props.title ?? 'Nathan on Software';
+const fullTitle = [
   Astro.props.title,
   'Nathan on Software',
 ].filter(x=>x).join(' ‒ ')
@@ -18,7 +19,7 @@ if(!(img?.startsWith('http'))) {
 <head>
   <meta charSet="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{title}</title>
+  <title>{fullTitle}</title>
   <meta name="description"  content={description}/>
   <link rel="alternate" type="application/rss+xml" href="rss.xml"/>
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32"/>
