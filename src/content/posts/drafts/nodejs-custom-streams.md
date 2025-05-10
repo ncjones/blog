@@ -6,6 +6,7 @@ desc: |
   How to create custom Node.JS readable, writable and transformer stream
   components.
 img: /img/manuscript-on-wooden-desk.webp
+slug: /posts/nodejs-custom-streams
 ---
 
 

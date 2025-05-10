@@ -1,21 +1,17 @@
 ---
 import Blog from "@layouts/blog";
 import Date from "@components/utilities/Date";
-import { allPosts } from "@data/post"
+import Posts from '../../Posts.js'
 
 export async function getStaticPaths() {
-	const markdownFiles = await Astro.glob('../../content/**/*.md');
-	const posts = allPosts( markdownFiles );
-	return posts.map((post) => {
-		return {
-			params: { post: post.slug },
-			props: { post }
-		};
-	})
+  return (await Posts.all()).map(post => ({
+    params: { path: post.relativePath },
+    props: { post },
+  }));
 }
 
-// Destructure to get both `Astro.props.post` and `Astro.props.post.Content`
-const { post: { Content }, post } = Astro.props;
+const { post } = Astro.props;
+const { Content } = await post.render();
 ---
 <Blog title={post.title} desc={post.desc} img={post.img ? post.img : null}>
 	<div class="justify-center">

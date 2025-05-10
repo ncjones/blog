@@ -1,10 +1,11 @@
 ---
-title: Node.js Custom Streams
+title: Streaming JSONLines with Node.js
 date: 2024-06-14
 author: Nathan
 desc: |
   How to stream jsonlines with Node.JS.
 img: /img/manuscript-on-wooden-desk.webp
+slug: /posts/nodejs-streaming-json-lines
 ---
 
 
