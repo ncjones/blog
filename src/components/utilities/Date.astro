@@ -4,4 +4,4 @@ const {date} = Astro.props;
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date)
 ---
-<time datetime={date}>{formattedDate}</time>
+<time datetime={date.toISOString()}>{formattedDate}</time>
