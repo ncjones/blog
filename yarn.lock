@@ -570,7 +570,6 @@ __metadata:
     autoprefixer: "npm:10.4.4"
     rehype-autolink-headings: "npm:6.1.1"
     rehype-slug: "npm:5.0.1"
-    shiki: "npm:0.10.1"
     tailwindcss: "npm:^4.1.4"
     theme-change: "npm:2.0.2"
     vitest: "npm:^3.1.2"
@@ -2615,13 +2614,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonc-parser@npm:^3.0.0":
-  version: 3.3.1
-  resolution: "jsonc-parser@npm:3.3.1"
-  checksum: 10c0/269c3ae0a0e4f907a914bf334306c384aabb9929bd8c99f909275ebd5c2d3bc70b9bcd119ad794f339dec9f24b6a4ee9cd5a8ab2e6435e730ad4075388fc2ab6
-  languageName: node
-  linkType: hard
-
 "kleur@npm:^3.0.3":
   version: 3.0.3
   resolution: "kleur@npm:3.0.3"
@@ -4222,17 +4214,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:0.10.1":
-  version: 0.10.1
-  resolution: "shiki@npm:0.10.1"
-  dependencies:
-    jsonc-parser: "npm:^3.0.0"
-    vscode-oniguruma: "npm:^1.6.1"
-    vscode-textmate: "npm:5.2.0"
-  checksum: 10c0/cc4db3462722261cb9ce0f7c0dbe278af3b99ad57dfab77b80c4dc9c8e3198f1d3f3c3433044a731c16f7afede9e60747f8a62290fbbaa18c26026f7b94cde8b
-  languageName: node
-  linkType: hard
-
 "shiki@npm:^3.0.0, shiki@npm:^3.2.1":
   version: 3.3.0
   resolution: "shiki@npm:3.3.0"
@@ -5148,20 +5129,6 @@ __metadata:
   bin:
     vitest: vitest.mjs
   checksum: 10c0/14b9c99812282d88b6e1dafde8cca22b07dcefa0a00d240145cf5cb95b082c287807bd884f417a046992bc74246aaf64662fd07179e60547c9277fbc8986439b
-  languageName: node
-  linkType: hard
-
-"vscode-oniguruma@npm:^1.6.1":
-  version: 1.7.0
-  resolution: "vscode-oniguruma@npm:1.7.0"
-  checksum: 10c0/bef0073c665ddf8c86e51da94529c905856559e9aba97a9882f951acd572da560384775941ab6e7e8db94d9c578b25fefb951e4b73c37e8712e16b0231de2689
-  languageName: node
-  linkType: hard
-
-"vscode-textmate@npm:5.2.0":
-  version: 5.2.0
-  resolution: "vscode-textmate@npm:5.2.0"
-  checksum: 10c0/87c4786606cf7a49d78b690b37236f919db594ff81f1a405f9d9a0a9ee66ff3450fe51c0d8731f270268f7be550adffb6711a4bbc6f56d76b71abe41949817c7
   languageName: node
   linkType: hard
 

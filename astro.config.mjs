@@ -16,12 +16,6 @@ export default defineConfig({
     rehypePlugins: [
       'rehype-slug',
     ],
-    syntaxHighlight: 'shiki',
-    shikiConfig: {
-      theme: 'rose-pine',
-      langs: [],
-      wrap: false
-    }
   }
 });
 
