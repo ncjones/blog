@@ -7,6 +7,13 @@ const title = [
   Astro.props.title,
   'Nathan on Software',
 ].filter(x=>x).join(' ‒ ')
+
+let img = Astro.props.img;
+if(!(img?.startsWith('http'))) {
+  const imgUrl = new URL(Astro.site);
+  imgUrl.pathname = (img ?? '/img/default.png');
+  img = imgUrl.href;
+}
 ---
 <head>
   <meta charSet="utf-8"/>
@@ -15,4 +22,21 @@ const title = [
   <meta name="description"  content={description}/>
   <link rel="alternate" type="application/rss+xml" href="rss.xml"/>
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32"/>
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={img} />
+  <meta name="twitter:image:alt" content={title} />
+
+  <!-- og -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={img} />
+  <meta property="og:image:alt" content={title} />}
+  <meta property="og:site_name" content="Nathan on Software" />}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.canonicalURL} />
+
 </head>
