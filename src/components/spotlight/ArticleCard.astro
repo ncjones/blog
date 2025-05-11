@@ -1,20 +1,20 @@
 ---
 const post = Astro.props.post;
 ---
-<article class="group relative isolate flex flex-col gap-3 lg:gap-6 lg:flex-row">
+<article class="group relative isolate">
 
   <div class="absolute ml-2 -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 rounded-2xl dark:bg-zinc-800/50">
   </div>
 
-  <a href={post.fullPath}>
+  <a href={post.fullPath} class="flex flex-col lg:flex-row gap-3 lg:gap-6">
 
     <!-- Image -->
-    <div class="relative aspect-video sm:aspect-2/1 lg:aspect-square lg:h-44 lg:w-44 lg:shrink-0">
+    <div class="lg:w-auto relative aspect-video sm:aspect-2/1 lg:aspect-square lg:h-44 lg:w-44 lg:shrink-0">
       <img src={post.img} alt="" class="absolute inset-0 size-full rounded-2xl object-cover">
       <div class="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
     </div>
 
-    <div class="md:col-span-3 relative flex flex-col gap-2 items-start">
+    <div class="lg:flex-1 relative flex flex-col gap-2 items-start">
 
       <!-- Date -->
       <time class="relative z-10 flex items-center text-sm text-zinc-400 dark:text-zinc-500 " dateTime={post.hyphenatedDate}>
@@ -22,12 +22,8 @@ const post = Astro.props.post;
 
       <!-- Title -->
       <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-        <!-- FIXME this link does not belong here but styling breaks without it :( -->
-        <a href={post.fullPath}>
-          <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl">
-          </span>
-          <span class="relative z-10">{post.title}</span>
-        </a>
+        <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+        <span class="relative z-10">{post.title}</span>
       </h2>
 
       <!-- Description -->
