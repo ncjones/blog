@@ -1,9 +1,9 @@
 ---
 const post = Astro.props.post;
 ---
-<article class="group relative isolate flex flex-col gap-8 lg:flex-row">
+<article class="group relative isolate flex flex-col gap-3 lg:flex-row">
 
-  <div class="absolute ml-2 -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50">
+  <div class="absolute ml-2 -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 rounded-2xl dark:bg-zinc-800/50">
   </div>
 
   <a href={post.fullPath}>
@@ -14,10 +14,10 @@ const post = Astro.props.post;
       <div class="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
     </div>
 
-    <div class="md:col-span-3 relative flex flex-col items-start">
+    <div class="md:col-span-3 relative flex flex-col gap-2 items-start">
 
       <!-- Date -->
-      <time class="relative z-10 mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 " dateTime={post.hyphenatedDate}>
+      <time class="relative z-10 flex items-center text-sm text-zinc-400 dark:text-zinc-500 " dateTime={post.hyphenatedDate}>
         {post.formattedDate}</time>
 
       <!-- Title -->
@@ -31,10 +31,10 @@ const post = Astro.props.post;
       </h2>
 
       <!-- Description -->
-      <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">{post.description}</p>
+      <p class="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">{post.description}</p>
 
       <!-- Call-to-action -->
-      <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">Read article<svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+      <div aria-hidden="true" class="relative z-10 flex items-center text-sm font-medium text-teal-500">Read article<svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
         <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         </path>
       </svg>
