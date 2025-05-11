@@ -4,6 +4,11 @@
 @plugin '@tailwindcss/typography';
 @config '../../typography.js';
 
+/* Tighten up code block line spacing */
+.prose pre {
+  line-height: 1.3rem;
+}
+
 @theme {
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.5rem;
